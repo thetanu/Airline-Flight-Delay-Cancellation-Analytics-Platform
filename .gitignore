@@ -12,7 +12,7 @@ archive (5)/
 *.pyd
 
 # Local database files
-sql_database/airline_analytics.db
+!sql_database/airline_analytics.db
 *.db
 
 # OS generated files
