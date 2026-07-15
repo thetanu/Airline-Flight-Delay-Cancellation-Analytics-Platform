@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+openpyxl
+sqlalchemy
+streamlit
+altair
+matplotlib
+seaborn
+python-dotenv
+pymysql
+cryptography
+joblib
