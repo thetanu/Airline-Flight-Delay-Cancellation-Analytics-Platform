@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 
 # Append python directory to system path for deserializing custom ML modules
 sys.path.append(os.path.join(os.path.dirname(__file__), 'python'))
+from feature_engineering import FlightDataPreprocessor
 
 # Load environment variables
 load_dotenv()
