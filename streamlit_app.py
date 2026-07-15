@@ -103,22 +103,31 @@ def get_db_connection():
     if db_url.startswith("mysql"):
         import urllib.parse
         import pymysql
-        parsed = urllib.parse.urlparse(db_url)
-        username = parsed.username
-        password = urllib.parse.unquote(parsed.password) if parsed.password else ""
-        hostname = parsed.hostname or "localhost"
-        port = parsed.port or 3306
-        db_name = parsed.path[1:]
-        
-        return pymysql.connect(
-            host=hostname,
-            port=port,
-            user=username,
-            password=password,
-            database=db_name
-        )
+        try:
+            parsed = urllib.parse.urlparse(db_url)
+            username = parsed.username
+            password = urllib.parse.unquote(parsed.password) if parsed.password else ""
+            hostname = parsed.hostname or "localhost"
+            port = parsed.port or 3306
+            db_name = parsed.path[1:]
+            
+            return pymysql.connect(
+                host=hostname,
+                port=port,
+                user=username,
+                password=password,
+                database=db_name,
+                connect_timeout=3
+            )
+        except Exception as e:
+            # Display warning in sidebar and fallback
+            st.sidebar.warning(f"⚠️ MySQL connection failed: {e}. Falling back to SQLite.")
+            db_path = os.path.join(os.path.dirname(__file__), 'sql_database', 'airline_analytics.db')
+            return sqlite3.connect(db_path)
     else:
         db_path = db_url.replace("sqlite:///", "")
+        if not os.path.isabs(db_path):
+            db_path = os.path.join(os.path.dirname(__file__), db_path)
         return sqlite3.connect(db_path)
 
 # Load ML Assets
