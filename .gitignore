@@ -1,21 +1,25 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Database and environment files
+# Environment Variables (sensitive data)
 .env
-sql_database/airline_analytics.db
 
-# Large raw data directories and files
+# Large raw data files (GitHub file limit is 100MB, train.csv is 1.3GB)
 archive (5)/
-archive*/
-*.csv
+**/*.csv
 
-# User-specific settings and virtual environments
-.venv/
-venv/
-ENV/
-env/
-.pytest_cache/
-.ipynb_checkpoints/
+# Python caches and compiles
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local database files
+sql_database/airline_analytics.db
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE Configurations
+.vscode/
+.idea/
+.agents/
