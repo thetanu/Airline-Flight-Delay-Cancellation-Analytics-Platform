@@ -1,0 +1,7 @@
+{
+    "test_samples": 100000,
+    "test_accuracy": 0.66526,
+    "test_macro_f1": 0.584177582405125,
+    "test_weighted_f1": 0.6983517915189736,
+    "test_roc_auc": 0.6913443097056962
+}

@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database and environment files
+.env
+sql_database/airline_analytics.db
+
+# Large raw data directories and files
+archive (5)/
+archive*/
+*.csv
+
+# User-specific settings and virtual environments
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
