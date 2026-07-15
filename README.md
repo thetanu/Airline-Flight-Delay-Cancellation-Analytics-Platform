@@ -8,9 +8,9 @@
 
 ![Python](https://img.shields.io/badge/Python-Pandas%20%7C%20Sklearn-3776AB?style=for-the-badge&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-MySQL%20%7C%20SQLite-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![Excel](https://img.shields.io/badge/Excel-openpyxl-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white) ![Status](https://img.shields.io/badge/Status-Complete-green?style=for-the-badge)
 
-### 🚀 [**LIVE DEMO — Try the Prediction App** (click on the button)](http://localhost:8501)
+### 🚀 [**LIVE DEMO — Try the Prediction App** (click on the button)](https://airline-flight-delay-cancellation-analytics.streamlit.app/)
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://localhost:8501)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://airline-flight-delay-cancellation-analytics.streamlit.app/)
 
 </div>
 
